@@ -1,0 +1,67 @@
+<?php
+
+use Curriculum Vitae;
+
+namespace About;
+
+class isaAlmenaCV {
+  //I'm a woman, worker, motivated of the technologies
+  //My variety of skills include self-learning and the ability to overcome
+
+//Basic atributtes
+  public $name = "";
+  public $dayOfBirth = "";
+  public $birthdayDate = '08/30/1988';
+  public $phone = "";
+  public $email = "";
+  public $workExperience = [];
+  public $education = [];
+  public $skills = [];
+
+//Basic data
+  public function __contruct(){
+    $this->name = 'Isa Almena';
+    $this->dayOfBirth();
+    $this->phone = '671 95 26 95';
+    $this->email = 'isa.saintalmond@gmail.com';
+  }
+//Calculate my years in days lived
+  private function dayOfBirth(){
+    $date = new DateTime($this->birthdayDate);
+    $now = new DateTime();
+    $interval = $now->diff($date);
+    return ($interval->days);
+  }
+
+  public function workExperience(){
+    return $this->workExperience = [
+      { '2019-now' : 'Scrum Master/Front-End Developer junior at Factoria F5' },
+      { '2019-now' : 'Freelance UX&UI Designer and Front-End Developer at Malt platform' },
+      { '2018-2019' : 'UI/UX Designer and Graphic Designer at Nobone App' },
+      { '4 month' : 'Social Media Strategist intern at Lola&MullenLowe Agency' },
+      { '1 month' : 'Graphic Designer at Vida Festival' },
+      { '7 month' : 'Graphic Designer intern Vida Festival' },
+      { '2017-2018' : 'Collaboration as a Graphic Designer at Casa Bacardí Sitges ' }
+    ]
+  }
+
+  public function education(){
+    return $this->education = [
+      { '2019-now'  : 'Full-Stack Developer - Factoria F5'};
+      { '2017-2018' : 'Brother del Futuro, Digital creativity - Brother Barcelona School'}
+      { '2015-2017' : 'Superior Technician in Advertising graphic and Graphic designer - EMAiD' },
+      { '2012-2015' : 'Superior Technician in Plastic Arts and Design in Illustration - EMAiD' },
+      { '2007-2010' : 'Tourism Degree - Girona University' }
+    ]
+  }
+
+  public function skills(){
+    return $this->skills = [
+      'HTML/CSS/JS', 'PHP', 'Bootstrap', 'SASS', 'Flexbox', 'Node.js', 'npm', 'Github', 'GitFlow', 'Jira',
+      'Vue.js', 'Laravel', 'MySQL', 'TDD', 'jest' 'UX/UI', 'Photoshop', 'Illustrator', 'Adobe Premier',
+      'After Effects', 'Zepplin', 'Principle', 'Sketch', 'Adobe XD', 'Arduino', 'Agile Methodologies',
+      'Scrum', 'Extreme Programing', 'Clean Code', 'mobile interface design', 'Design Patterns',
+      'Wireframing'
+    ]
+  }
+}
